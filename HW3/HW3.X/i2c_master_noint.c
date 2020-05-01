@@ -1,7 +1,7 @@
 // I2C Master utilities, using polling rather than interrupts
 // The functions must be called in the correct order as per the I2C protocol
 // I2C pins need pull-up resistors, 2k-10k
-#include "i2c.h"
+#include "i2c_master_noint.h"
 
 #include<xc.h>           // processor SFR definitions
 #include<sys/attribs.h>  // __ISR macro
