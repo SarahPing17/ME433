@@ -32,6 +32,8 @@ void ssd1306_drawPixel(unsigned char x, unsigned char y, unsigned char color);
 
 /// this should be private
 void ssd1306_command(unsigned char c);
+void drawMessage(int x, int y,unsigned char *m );
 void drawletter(int a, int b, unsigned char var);
+
 
 #endif
