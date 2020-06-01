@@ -95,8 +95,11 @@ int main(){
             sprintf(message, "t: %d ", imu[0]);
             drawMessage(0,16,message);
 //        } else{
-//            bar_x(-imu[5], 1);
-//            bar_y(imu[4], 1);
+//            float bar;
+//            bar_x(imu[5], 1);//-
+////            bar_y(imu[4], 1);
+////            sprintf(message, "b: %d ", bar);
+////            drawMessage(64,16,message);
 //        }
         
         ssd1306_update();
@@ -108,6 +111,16 @@ int main(){
     }
 }
 
+void bar_x(signed short a, unsigned char color){
+    ssd1306_drawPixel(64, 16, color);
+    int i=0;
+    float b=64.0/8000.0*a;
+    for(i=0;i<b;i++){
+        ssd1306_drawPixel(64+b, 16, color);
+        ssd1306_update();
+    }
+//    return b;
+}
 
 void imu_setup(){
     unsigned char who = 0;
