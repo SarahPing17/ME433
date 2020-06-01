@@ -73,7 +73,7 @@ int main(){
     char message2[100];
     char message3[100];
     char DAY[30];
-    rtcc_setup(0x00510100, 0x20060103);
+    rtcc_setup(0x00510100, 0x20060101);
     int i = 0;
     
     while (1) {
